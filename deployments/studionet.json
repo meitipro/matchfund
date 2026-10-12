@@ -1,0 +1,227 @@
+{
+  "network": "studionet",
+  "chain_id": 61999,
+  "contract": "0xcc9d9D05CB053d06d8736E312bA8D61E79534235",
+  "explorer": "https://explorer-studio.genlayer.com/address/0xcc9d9D05CB053d06d8736E312bA8D61E79534235",
+  "source_sha256": "4e02f3a9396b834404e3f61d8e77b21519295079360a0228fd3f47690241f652",
+  "constructor": {},
+  "accounts": {
+    "matcher": "0xE28361d6a33a9Ab96b451De9D578B082C20bc8fD",
+    "ann": "0xbF0947704479c626794930Ed67C96c1a467c9a7D",
+    "ben": "0x75d6726B8734B0f97d86F0147f1fAA6F087D67F5",
+    "cal": "0x4A504b15f58756be48F2234D0458f350bb11da10",
+    "dev": "0x25Eb3096a4bf4d10DE929A35334f262FEDA1FB9e",
+    "stranger": "0x1a3dAB515A5A9C391544a1ED8ae0b6D51460BeAf",
+    "club": "0xA4aFA50368FF6ad3d53DF522fC45AddDab09cadd",
+    "library": "0x2E6683Dd9A405e06f6959b465748915E32eD93A5",
+    "pitch": "0x13Ee6D2311883A25F16AEDE48027b77C190205F0",
+    "ward": "0x774eeF830218A134c950579D95B8455ab16aD21D"
+  },
+  "balances": {
+    "club_before": "0",
+    "library_before": "0",
+    "pitch_before": "0",
+    "ward_before": "0",
+    "matcher_before": "1390000000000000000",
+    "club_after": "200000000000000000",
+    "library_after": "450000000000000000",
+    "pitch_after": "100000000000000000",
+    "ward_after": "50000000000000000",
+    "matcher_after": "1690000000000000000"
+  },
+  "owed": {
+    "club": "200000000000000000",
+    "library": "450000000000000000",
+    "pitch": "100000000000000000",
+    "ward": "50000000000000000",
+    "matcher": "300000000000000000"
+  },
+  "held_after": "0",
+  "steps": [
+    {
+      "step": "deploy",
+      "method": "deploy",
+      "from": "0xE28361d6a33a9Ab96b451De9D578B082C20bc8fD",
+      "tx": "0xf9a4ddcb42260ce369fb01278a618b24d5284780a19b7f3e29bf49a4aea4661b",
+      "status": "FINALIZED",
+      "ok": true,
+      "refusal": "",
+      "address": "0xcc9d9D05CB053d06d8736E312bA8D61E79534235"
+    },
+    {
+      "step": "fund 0 opened: 0.6 GEN pool, 1:1, cap 0.2",
+      "method": "open",
+      "from": "0xE28361d6a33a9Ab96b451De9D578B082C20bc8fD",
+      "tx": "0x8bae89b855e8b4a608e95d1eadb2d38349e8fe2692658b3e71610e2558b82814",
+      "status": "ACCEPTED",
+      "ok": true,
+      "refusal": ""
+    },
+    {
+      "step": "the matcher gives to its own fund",
+      "method": "give",
+      "from": "0xE28361d6a33a9Ab96b451De9D578B082C20bc8fD",
+      "tx": "0x32a3ef0550b17e0b73d4061c51db9a8375bc81169ed423728812f8a203e17c0a",
+      "status": "ACCEPTED",
+      "ok": false,
+      "refusal": "[EXPECTED] the matcher cannot give to its own fund"
+    },
+    {
+      "step": "gift 0: Ann, 0.1 GEN to the reading club",
+      "method": "give",
+      "from": "0xbF0947704479c626794930Ed67C96c1a467c9a7D",
+      "tx": "0xddd3587ab7f823de8e9da93d92317be8a90df442922e790669e62f4b11ac8ffe",
+      "status": "ACCEPTED",
+      "ok": true,
+      "refusal": ""
+    },
+    {
+      "step": "gift 1: Ben, 0.25 GEN to the library",
+      "method": "give",
+      "from": "0x75d6726B8734B0f97d86F0147f1fAA6F087D67F5",
+      "tx": "0x6d83336083376965d4c8d8297f3c0c07c93948b9a97b22ea3be6ccaf4dd800be",
+      "status": "ACCEPTED",
+      "ok": true,
+      "refusal": ""
+    },
+    {
+      "step": "gift 2: Cal, 0.1 GEN to a football club",
+      "method": "give",
+      "from": "0x4A504b15f58756be48F2234D0458f350bb11da10",
+      "tx": "0x93dd1e91777c7dca170a37a832597dc231c998e20fcfd76c49fa75f4191eb419",
+      "status": "ACCEPTED",
+      "ok": true,
+      "refusal": ""
+    },
+    {
+      "step": "gift 3: Dev, 0.05 GEN to a ward in Manchester",
+      "method": "give",
+      "from": "0x25Eb3096a4bf4d10DE929A35334f262FEDA1FB9e",
+      "tx": "0x550131ea47a4ea4ae83053252d5ba440c0d4d4ff8fd4eb4f3967c82797de55f1",
+      "status": "ACCEPTED",
+      "ok": true,
+      "refusal": ""
+    },
+    {
+      "step": "Ann gives to herself",
+      "method": "give",
+      "from": "0xbF0947704479c626794930Ed67C96c1a467c9a7D",
+      "tx": "0x4eb9cadb24b045f754b3172f7760badba64e4886a74156075f784584ece822e8",
+      "status": "ACCEPTED",
+      "ok": false,
+      "refusal": "[EXPECTED] a donor cannot give to itself"
+    },
+    {
+      "step": "Ben gives to the reading club, already matched",
+      "method": "give",
+      "from": "0x75d6726B8734B0f97d86F0147f1fAA6F087D67F5",
+      "tx": "0xf20a965b28bf0a1cc56eef498a779a32f6b8efcedf83f9e8c159a3e6d9cedefe",
+      "status": "ACCEPTED",
+      "ok": false,
+      "refusal": "[EXPECTED] this fund already matched a gift to this recipient; give to it directly"
+    },
+    {
+      "step": "a close while gifts are open",
+      "method": "close",
+      "from": "0x1a3dAB515A5A9C391544a1ED8ae0b6D51460BeAf",
+      "tx": "0x214186171d154977db0b33647cb8ef3289d5205a8592f276013fc6ba6f7400d0",
+      "status": "ACCEPTED",
+      "ok": false,
+      "refusal": "[EXPECTED] gifts are open until 2026-10-09T23:04:12Z"
+    },
+    {
+      "step": "a gift after the window closed",
+      "method": "give",
+      "from": "0x1a3dAB515A5A9C391544a1ED8ae0b6D51460BeAf",
+      "tx": "0x181ed2155d3eea2783d70fbbc092b4e10e907bc42fff0c5ae207fa93b4dcc830",
+      "status": "ACCEPTED",
+      "ok": false,
+      "refusal": "[EXPECTED] gifts closed at 2026-10-09T23:04:12Z; a gift after the window is never judged"
+    },
+    {
+      "step": "fund 0 closed: the rest back to the matcher",
+      "method": "close",
+      "from": "0x1a3dAB515A5A9C391544a1ED8ae0b6D51460BeAf",
+      "tx": "0xbfb4d1b63991373e70e2d67f7634a9a5904070a7be268b723fa2a738630776e9",
+      "status": "ACCEPTED",
+      "ok": true,
+      "refusal": ""
+    }
+  ],
+  "funds": [
+    {
+      "fund": {
+        "cap": "200000000000000000",
+        "closed_at": "2026-10-09T23:05:17Z",
+        "closes_at": "2026-10-09T23:04:12Z",
+        "gifts": 4,
+        "given_total": "500000000000000000",
+        "left": "0",
+        "matched": 2,
+        "matched_total": "300000000000000000",
+        "matcher": "0xE28361d6a33a9Ab96b451De9D578B082C20bc8fD",
+        "mission": "Children's reading in Leeds: books, libraries and reading clubs for children under twelve living in Leeds.",
+        "name": "Leeds Reads matching fund",
+        "opened_at": "2026-10-09T22:49:12Z",
+        "pool": "600000000000000000",
+        "ratio_pct": 100,
+        "returned": "300000000000000000",
+        "status": "closed"
+      },
+      "gifts": [
+        {
+          "amount": "100000000000000000",
+          "at": "2026-10-09T22:49:46.752003Z",
+          "cause": "Forty picture books and two bean bags for the after-school reading club at a primary school in Harehills, Leeds, which meets twice a week for children aged five to eleven.",
+          "donor": "0xbF0947704479c626794930Ed67C96c1a467c9a7D",
+          "fund": 0,
+          "id": 0,
+          "matched": "100000000000000000",
+          "reason_is_leader_supplied": true,
+          "recipient": "0xA4aFA50368FF6ad3d53DF522fC45AddDab09cadd",
+          "verdict": "fits",
+          "why": "Books and bean bags support a reading club for children aged five to eleven in Harehills, Leeds, squarely matching the mission."
+        },
+        {
+          "amount": "250000000000000000",
+          "at": "2026-10-09T22:50:48.758834Z",
+          "cause": "The summer reading challenge at Leeds Central Library for primary school children: extra copies of the most borrowed books, stickers and certificates for every child who finishes.",
+          "donor": "0x75d6726B8734B0f97d86F0147f1fAA6F087D67F5",
+          "fund": 0,
+          "id": 1,
+          "matched": "200000000000000000",
+          "reason_is_leader_supplied": true,
+          "recipient": "0x2E6683Dd9A405e06f6959b465748915E32eD93A5",
+          "verdict": "fits",
+          "why": "The cause supports children's reading in a Leeds library for primary school children, fitting the mission exactly."
+        },
+        {
+          "amount": "100000000000000000",
+          "at": "2026-10-09T22:51:24.213634Z",
+          "cause": "A new floodlight for the training pitch of an amateur adult football club in Leeds, so the team can train on winter evenings.",
+          "donor": "0x4A504b15f58756be48F2234D0458f350bb11da10",
+          "fund": 0,
+          "id": 2,
+          "matched": "0",
+          "reason_is_leader_supplied": true,
+          "recipient": "0x13Ee6D2311883A25F16AEDE48027b77C190205F0",
+          "verdict": "outside",
+          "why": "Floodlights for adult football training have no connection to children's reading, books, libraries, or reading clubs."
+        },
+        {
+          "amount": "50000000000000000",
+          "at": "2026-10-09T22:51:59.669970Z",
+          "cause": "Picture books and a reading trolley for the children's ward of a hospital in Manchester, for children staying more than a week.",
+          "donor": "0x25Eb3096a4bf4d10DE929A35334f262FEDA1FB9e",
+          "fund": 0,
+          "id": 3,
+          "matched": "0",
+          "reason_is_leader_supplied": true,
+          "recipient": "0x774eeF830218A134c950579D95B8455ab16aD21D",
+          "verdict": "outside",
+          "why": "Hospital children\u2019s reading support is in Manchester, not Leeds, so it does not meet the mission\u2019s required location."
+        }
+      ]
+    }
+  ]
+}
